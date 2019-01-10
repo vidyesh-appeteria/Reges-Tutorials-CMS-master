@@ -1,0 +1,436 @@
+﻿@charset "utf-8";
+
+@charset "utf-8";
+@import "font.css";
+
+body {
+    margin: 0 auto;
+    background: #edebeb;
+    font-family: 'Muli', sans-serif;
+}
+
+::-moz-selection {
+    background: #d82531;
+    color: white;
+}
+
+::-webkit-selection {
+    background: #d82531;
+    color: white;
+}
+
+a, a:hover, a:focus {
+    outline: none;
+}
+
+    a, a:hover {
+        -webkit-transition: all 0.35s ease-in-out;
+        -moz-transition: all 0.35s ease-in-out;
+        -ms-transition: all 0.35s ease-in-out;
+        -o-transition: all 0.35s ease-in-out;
+        transition: all 0.35s ease-in-out;
+        text-decoration: none;
+    }
+
+        a, a:visited {
+            color: #0087cc;
+            -moz-transition: all 0.3s ease-in-out;
+            -o-transition: all 0.3s ease-in-out;
+            -webkit-transition: all 0.3s ease-in-out;
+            -ms-transition: all 0.3s ease-in-out;
+            transition: all 0.3s ease-in-out;
+        }
+
+.red {
+    color: red;
+}
+
+a:hover, a:focus {
+    color: #ff7b29;
+}
+
+.header-section {
+    margin: 0 auto;
+    padding: 15px 0;
+    background: #fff;
+    /*text-align:center;*/
+}
+
+.member-section {
+    margin: 100px auto;
+    text-align: center;
+}
+
+.login {
+    background: #350e68;
+    text-align: center;
+    padding: 10px 80px;
+    margin-bottom: 15px;
+    margin-top: 15px;
+    color: #FFF;
+    font-size: 16px;
+    font-family: 'Didact Gothic', sans-serif;
+    border: none;
+    border-radius: 4px;
+    text-decoration: none;
+}
+
+    .login:hover {
+        background: #000;
+        text-decoration: none;
+    }
+
+.body-section {
+    margin: 0 auto;
+    padding: 0;
+}
+
+    .body-section p {
+        margin: 0 auto;
+        padding: 0 20px 25px 20px;
+        font-size: 14px;
+        line-height: 20px;
+        letter-spacing: 0.5px;
+        text-align: left;
+        color: #000;
+        font-family: 'Quicksand', sans-serif;
+        font-weight: normal;
+    }
+
+    .body-section .confirmtext {
+        margin: 3% auto 5px auto;
+        font-size: 28px;
+        text-align: center;
+        color: #000;
+        font-family: sans-serif;
+        font-weight: normal;
+    }
+
+    .body-section h1 {
+        margin: 5% auto 5px auto;
+        /*padding:30px 200px;*/
+        line-height: 26px;
+        font-size: 28px;
+        text-align: center;
+        color: #000;
+        font-family: sans-serif;
+        font-weight: normal;
+    }
+
+    .body-section h2 {
+        margin: 0 auto 10px auto;
+            /*padding: 80px 20px 0 20px;*/
+            line-height: 30px;
+            font-size: 22px;
+            text-align: center;
+            color: #000;
+            font-family:sans-serif;
+            font-weight: normal;
+    }
+
+    .body-section h3 {
+        margin: 1% auto 10px auto;
+        /*padding:80px 100px;*/
+        line-height: 30px;
+        font-size: 22px;
+        text-align: center;
+        color:#1e68a9;
+        font-family: sans-serif;
+        font-weight: 600;
+    }
+
+    .body-section h4 {
+        margin: 1% auto 10px auto;
+        font-size: 20px;
+        text-align: center;
+       color:#1e68a9;
+        font-family: sans-serif;
+        font-weight: 600;
+    }
+
+    .body-section h5 {
+        margin: 1% auto 10px auto;
+        /*padding:80px 100px;*/
+        line-height: 30px;
+        font-size: 20px;
+        text-align: center;
+        color: red;
+        font-family: sans-serif;
+        font-weight: normal;
+    }
+
+.form-section {
+    margin: 0 auto;
+    padding: 10px 0 25px 0;
+    height: auto;
+    /*background:#e4e4e4;*/
+    font-size: 14px;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.checkboxsect {
+    background: #fff;
+    margin-top: 15px;
+    border: 1px solid #dddcdc;
+    border-radius: 8px;
+}
+
+.footer-section {
+    border-top: 1px solid #cec3ce;
+    margin: 0 auto 0 auto;
+    padding: 20px 0;
+    text-align: center;
+}
+
+    .footer-section p {
+        margin: 0 auto;
+        padding: 0 0;
+        font-size: 14px;
+        line-height: 20px;
+        letter-spacing: 0.5px;
+        text-align: center;
+        color: #000;
+        font-family: 'Quicksand', sans-serif;
+        font-weight: normal;
+    }
+
+.signature {
+    margin: 0 200px 30px 200px;
+    padding: 50px 0 0 0;
+    height: 250px;
+    background: #fff;
+}
+
+/* Portrait phones to Landscape phone*/
+@media (min-width: 320px) and (max-width: 480px) {
+
+    .header-section {
+        margin: 0 auto;
+        padding: 15px 0;
+        background: #fff;
+        text-align: center;
+    }
+
+    .member-section {
+        margin: 100px auto;
+        text-align: center;
+    }
+
+    .login {
+        background: #350e68;
+        text-align: center;
+        padding: 10px 118px;
+        margin-bottom: 15px;
+        margin-top: 5px;
+        color: #FFF;
+        font-size: 16px;
+        font-family: 'Didact Gothic', sans-serif;
+        border: none;
+        border-radius: 4px;
+        text-decoration: none;
+    }
+
+        .login:hover {
+            background: #000;
+            text-decoration: none;
+        }
+
+    .body-section {
+        margin: 0 auto;
+        padding: 0;
+    }
+
+        .body-section p {
+            margin: 0 auto;
+            padding: 0 10px 25px 10px;
+            font-size: 14px;
+            line-height: 20px;
+            letter-spacing: 0.5px;
+            text-align: left;
+            color: #000;
+            font-family: 'Quicksand', sans-serif;
+            font-weight: normal;
+        }
+
+        .body-section .confirmtext {
+           margin: 3% auto 5px auto;
+        font-size: 24px;
+        text-align: center;
+        color: #000;
+        font-family: sans-serif;
+        font-weight: normal;
+        }
+
+        .body-section h1 {
+            margin: 2% auto 10px auto;
+            /*padding:30px 200px;*/
+            line-height: 26px;
+            font-size: 24px;
+            text-align: center;
+            color: #000;
+            font-family: sans-serif;
+            font-weight: normal;
+        }
+
+        .body-section h2 {
+            margin: 0 auto 10px auto;
+            /*padding: 80px 20px 0 20px;*/
+            line-height: 30px;
+            font-size: 22px;
+            text-align: center;
+            color: #000;
+            font-family:sans-serif;
+            font-weight: normal;
+        }
+        .body-section h3 {
+        margin: 1% auto 10px auto;
+        /*padding:80px 100px;*/
+        line-height: 30px;
+        font-size: 19px;
+        text-align: center;
+        color:#1e68a9;
+        font-family: sans-serif;
+        font-weight: 600;
+    }
+
+    .form-section {
+        margin: 0 auto;
+        padding: 0 0 25px 0;
+        height: auto;
+        background: #e4e4e4;
+        font-size: 14px;
+        font-family: 'Quicksand', sans-serif;
+    }
+
+    .checkboxsect {
+        background: #fff;
+        margin-top: 15px;
+        margin-bottom: 15px;
+        border: 1px solid #dddcdc;
+        border-radius: 8px;
+    }
+
+    .footer-section {
+        border-top: 1px solid #cec3ce;
+        margin: 0 auto 0 auto;
+        padding: 20px 0;
+        text-align: center;
+    }
+
+        .footer-section p {
+            margin: 0 auto;
+            padding: 0 25px;
+            font-size: 12px;
+            line-height: 18px;
+            letter-spacing: 0.5px;
+            text-align: center;
+            color: #000;
+            font-family: 'Quicksand', sans-serif;
+            font-weight: normal;
+        }
+
+    .signature {
+        margin: 0 0 20px 0;
+        padding: 50px 0 0 0;
+        height: 250px;
+        background: #fff;
+    }
+
+        .signature img {
+            display: none;
+        }
+}
+
+
+
+/* Landscape phone to portrait tablet */
+@media (min-width: 481px) and (max-width: 767px) {
+}
+
+
+
+
+/* Portrait tablet to landscape and desktop */
+@media (min-width: 768px) and (max-width: 979px) {
+
+    .body-section h1 {
+        margin: 2% auto 10px auto;
+        /*padding:30px 200px;*/
+        line-height: 26px;
+        font-size: 24px;
+        text-align: center;
+        color: #000;
+        font-family: sans-serif;
+        font-weight: normal;
+    }
+
+    .body-section .confirmtext {
+       margin: 3% auto 5px auto;
+        font-size: 24px;
+        text-align: center;
+        color: #000;
+        font-family: sans-serif;
+        font-weight: normal;
+    }
+
+    .body-section h2 {
+        margin: 0 auto 10px auto;
+            /*padding: 80px 20px 0 20px;*/
+            line-height: 30px;
+            font-size: 22px;
+            text-align: center;
+            color: #000;
+            font-family:sans-serif;
+            font-weight: normal;
+    }
+    .body-section h3 {
+        margin: 1% auto 10px auto;
+        /*padding:80px 100px;*/
+        line-height: 30px;
+        font-size: 19px;
+        text-align: center;
+        color:#1e68a9;
+        font-family: sans-serif;
+        font-weight: 600;
+    }
+}
+
+
+@media (min-width: 980px) and (max-width:1200px) {
+
+    .body-section h1 {
+        margin: 2% auto 10px auto;
+        /*padding:30px 200px;*/
+        line-height: 26px;
+        font-size: 24px;
+        text-align: center;
+        color: #000;
+        font-family: sans-serif;
+        font-weight: normal;
+    }
+
+    .body-section .confirmtext {
+        margin: 5% auto 10px auto;
+        line-height: 26px;
+        font-size: 24px;
+        text-align: center;
+        color: #000;
+        font-family: sans-serif;
+        font-weight: normal;
+    }
+}
+
+.home {
+    background: url('../Images/LAPPL2.jpg') no-repeat center;
+    background-attachment: fixed;
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background-color: hsla(0,0%,100%,0.90);
+    background-blend-mode: overlay;
+    background-repeat: no-repeat;
+}

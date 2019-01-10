@@ -1,0 +1,286 @@
+﻿
+/*body
+{
+	margin-left: 0px;
+	margin-top: 0px; 
+	background-repeat: repeat;
+	font-family: Microsoft Sans Serif;
+	font-size: 14px;
+	color: #06758F;
+}*/
+h1 {
+color: #F15B40;
+}
+.textbox {
+    border: 1px;
+    border-style: solid;
+    border-color: #F15B40; /*Change Here*/
+    width: 180px;
+    border-radius: 4px;
+    line-height: 1.33;
+    padding: 8px;
+    font-size: 14px;
+}
+
+
+.button, .buttonSecond,.buttonMenu {
+    padding: 8px;
+    background: #F15B40; /*Change Here*/
+    color: #fff;
+    border-radius: 4px;
+    width: 80px;
+    border: 1px solid;
+    margin-top: 10px;
+    font-size: 14px;
+    line-height: 1.33;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    font-weight: bold;
+    font-family: Verdana;
+}
+
+.buttonSecond {
+    background: Gray;
+    border-color:#BCBEC0; /*Change Here*/
+}
+.buttonMenu{
+    height:50px;
+    width:180px;
+     font-size: 18px;
+}
+
+.label, .labelTitle,.labelError {
+    color:#F15B40; /*Change Here*/
+    background-color: Transparent;
+    font-family: Verdana;
+    font-size: 14px;
+    padding: 8px;
+}
+.pnlMenu {
+    border:3px solid #F15B40; /*Change Here*/
+}
+
+.labelTitle {
+    font-weight: bold;
+    font-size: 42px;
+    color: white;
+}
+
+.labelError {
+ color: #ee0000;
+}
+
+.header {
+    width: 100%;
+    background-color: #F15B40; /*Change Here*/
+    background-repeat: no-repeat;
+    height: 120px;
+    padding: 0px;
+    border-spacing: 0px;
+    margin: 0px;
+    margin-bottom: 15px;
+}
+
+.ddl {
+    border: 1px;
+    border-style: solid;
+    border-color: #F15B40; /*Change Here*/
+    width: 199px;
+    border-radius: 4px;
+    line-height: 1.33;
+    padding: 8px;
+    font-size: 14px;
+}
+
+
+.radiolist {
+    background-color: Transparent;
+    font-family: Verdana;
+    font-size: 14px;
+    color: #F15B40; /*Change Here*/
+}
+
+/*for Grid*/
+.dg {
+    margin: 18px;
+    color: #000000;
+    font-family: Verdana;
+    font-size: 13px;
+    background-color: #E5E3F1;
+    background:0px;
+}
+
+.dgheader {
+    border: 1px;
+    border-style: solid;
+    border-color: #000000;
+    vertical-align: top;
+    font-weight: bold;
+    height: 22px;
+    font-size: 14px;
+}
+
+    .dgheader a {
+        color: #ffffff;
+    }
+
+.dgpager, .dgheader {
+    background-color: #F15B40; /*Change Here*/
+    color: #ffffff;
+}
+
+    .dgpager a {
+        color: #ffffff;
+    }
+
+        .dgpager a:visited {
+            color: #000000;
+        }
+
+/*for Grid
+
+
+/*************************************************************************************************************************/
+
+/*.ContentPopup {
+    margin-top: 21px;
+    margin-left: 10px;
+    width: 96%;
+    height: 98%;
+    background-image: url( images/ContentBackground.JPG );
+    background-repeat: repeat;
+}
+
+.divName, .divSubName {
+    font-size: 50px;
+    color: #06758F;
+    text-align: center;
+}
+
+.divSubName {
+    font-size: 25px;
+}
+
+
+
+
+/*
+.Logo
+{
+	float: left;
+	width: 11%; 
+	background-image: url(    'images/HeaderCorner.JPG' );
+	background-repeat: no-repeat;
+	height: 63px;
+	padding-right: 0px;
+	text-align: left;
+	color: White;
+	font-size: 22px;
+	padding: 0px;
+	margin: 0px;
+	border-spacing: 0px;
+}
+
+
+.lnkButton {
+    text-decoration: none;
+    cursor: hand;
+    font-family: Microsoft Sans Serif;
+    font-size: 12px;
+    color: Black;
+}
+
+
+
+.gridtextbox {
+    background-color: #E5EAF0;
+    border: 0px;
+}
+/*for Accordin 
+.acrHeader {
+    vertical-align: top;
+    font-weight: bold;
+    height: 22px;
+    border: 1px solid #FFFFFF;
+}
+
+.acrContent {
+    border: 1px solid #000000;
+    margin: 3px;
+    color: #000000;
+    font-family: Microsoft Sans Serif;
+    font-size: 12px;
+    background-color: #F5BCEF;
+}
+
+
+
+.TabPanel {
+    padding: 0px 0px 0px 0px;
+    margin: 0px 0px 0px 0px;
+    background-image: url(images/ContentBackground.JPG);
+    background-repeat: repeat;
+}
+
+
+.chklist {
+    background-color: Transparent;
+    border-bottom-width: medium;
+    border-bottom-color: White;
+    font-family: Microsoft Sans Serif;
+    font-size: 12px;
+    border: Solid 1px black;
+    width: 250px;
+}
+
+
+
+.bullist {
+    background-color: Transparent;
+    font-family: Microsoft Sans Serif;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+    .bullist a {
+        color: #F2E1AF;
+        font-style: normal; /* #702925;
+    }
+
+.Menu {
+    background-color: Gray;
+    color: White;
+    font-family: Microsoft Sans Serif;
+    font-size: 12px;
+}
+
+.ListSerarch {
+    background-color: Black;
+    color: White;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.ListSearch {
+    color: Gray;
+    font-size: 12px;
+    font-weight: normal;
+    font-style: italic;
+}
+
+.WaterMarked {
+    color: Gray;
+    border: 0px;
+    width: 180px;
+}
+
+.checklist li {
+    background: url(images/checkmark.png) no-repeat;
+    height: 30px;
+    line-height: 25px;
+    padding: 0;
+    padding-left: 35px;
+    margin: 0;
+    list-style: none;
+}*/

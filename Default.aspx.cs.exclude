@@ -1,0 +1,152 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+using System.Data.SqlClient;
+using System.Data;
+
+public partial class _Default : System.Web.UI.Page
+{
+    protected void Page_PreInit(object sender, EventArgs e)
+    {
+        if (Session["Theme"] != null)
+            this.Theme = Session["Theme"].ToString();
+    }
+
+    protected void Page_Load(object sender, EventArgs e)
+    {
+        if (!IsPostBack)
+        {
+            FillGrid();
+
+        }
+    }
+
+    protected void btnClear_Click(object sender, EventArgs e)
+    {
+        txtFirstName.Text = string.Empty;
+        txtLastName.Text = string.Empty;
+        txtEmail.Text = string.Empty;
+        txtMobile.Text = string.Empty;
+        txtPassword.Text = string.Empty;
+        txtConfirmPassword.Text = string.Empty;
+        ddlCountry.SelectedIndex = 0;
+        ddlState.SelectedIndex = 0;
+        rblGender.SelectedIndex = -1;
+       // chkAgree.Checked = false;
+    }
+
+    protected void ddlCountry_SelectedIndexChanged(object sender, EventArgs e)
+    {
+        ddlState.Items.Clear();
+        ddlState.Items.Add(new ListItem("Select", "0"));
+
+        if (ddlCountry.SelectedValue=="IN")
+        {
+            ddlState.Items.Add(new ListItem("Maharashtra", "MH"));
+            ddlState.Items.Add(new ListItem("Gujarat", "GJ"));
+        }
+        else if (ddlCountry.SelectedValue == "US")
+        {
+            ddlState.Items.Add(new ListItem("Alaska", "AL"));
+            ddlState.Items.Add(new ListItem("California", "CA"));
+        }
+        else if (ddlCountry.SelectedValue == "UK")
+        {
+            ddlState.Items.Add(new ListItem("Avon", "AV"));
+            ddlState.Items.Add(new ListItem("Kent", "KE"));
+        }
+    }
+
+    protected void btnSubmit_Click(object sender, EventArgs e)
+    {
+        DatabaseHelper db = new DatabaseHelper();
+
+        List<SqlParameter> paras = new List<SqlParameter>();
+
+        paras.Add(new SqlParameter("@UserId", hdnUserID.Value));
+        paras.Add(new SqlParameter("@FirstName", txtFirstName.Text));
+        paras.Add(new SqlParameter("@LastName", txtLastName.Text));
+        paras.Add(new SqlParameter("@Email", txtEmail.Text));
+        paras.Add(new SqlParameter("@Mobile",txtMobile.Text));
+        paras.Add(new SqlParameter("@Gender",rblGender.SelectedValue ));
+        paras.Add(new SqlParameter("@Country", ddlCountry.SelectedValue));
+        paras.Add(new SqlParameter("@State",ddlState.SelectedValue));
+        paras.Add(new SqlParameter("@Password", txtPassword.Text));
+
+        db.ExecuteNonQuery("UserMaster_Save", CommandType.StoredProcedure, paras);
+        FillGrid();
+    }
+    private DataTable FillGrid()
+    {
+        DatabaseHelper db = new DatabaseHelper();
+        DataSet ds = db.FillDataSet("Select * from UserMaster", CommandType.Text);
+
+        gvData.DataSource = ds;
+        gvData.DataBind();
+
+        if (ds.Tables.Count > 0)
+            return ds.Tables[0];
+        else
+            return null;
+    }
+
+    protected void gvData_RowCommand(object sender, GridViewCommandEventArgs e)
+    {
+        DatabaseHelper db = new DatabaseHelper();
+
+
+        if (e.CommandName.ToString()=="EDT")
+        {
+            List<SqlParameter> paras = new List<SqlParameter>();
+            paras.Add(new SqlParameter("@UserId", e.CommandArgument.ToString()));
+
+            SqlDataReader dr = db.ExecuteReader("select * from UserMaster where userid=@UserId", CommandType.Text, paras);
+
+            if(dr.HasRows)
+            {
+                dr.Read();
+
+                hdnUserID.Value = Convert.ToString(dr["UserId"]);
+
+                txtFirstName.Text = Convert.ToString(dr["FirstName"]);
+                txtLastName.Text = Convert.ToString(dr["LastName"]);
+                txtEmail.Text = Convert.ToString(dr["Email"]);
+                txtMobile.Text = Convert.ToString(dr["Mobile"]);
+                ddlCountry.SelectedValue = Convert.ToString(dr["country"]);
+                rblGender.SelectedValue = Convert.ToString(dr["Gender"]);
+                ddlCountry_SelectedIndexChanged(null, null);
+                ddlState.SelectedValue = Convert.ToString(dr["State"]);
+            }
+        }
+        else if(e.CommandName.ToString()=="DEL")
+        {
+           
+
+            List<SqlParameter> paras = new List<SqlParameter>();
+            paras.Add(new SqlParameter("@UserId", e.CommandArgument.ToString()));
+
+            db.ExecuteNonQuery("delete from UserMaster where userid=@UserId", CommandType.Text, paras);
+            FillGrid();
+        }
+    }
+
+       protected void gvData_PageIndexChanging(object sender, GridViewPageEventArgs e)
+    {
+        gvData.PageIndex = e.NewPageIndex;
+        FillGrid();
+    }
+
+    protected void gvData_Sorting(object sender, GridViewSortEventArgs e)
+    {
+        DataTable dt = FillGrid();
+
+        hdnSort.Value = hdnSort.Value == "ASC" ? "DESC" : "ASC";
+
+        dt.DefaultView.Sort = e.SortExpression + " " + hdnSort.Value;
+        gvData.DataSource = dt.DefaultView;
+        gvData.DataBind();
+    }
+}

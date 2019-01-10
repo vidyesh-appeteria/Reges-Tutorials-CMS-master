@@ -1,0 +1,104 @@
+<html>
+<head>
+
+<style>
+.button  {
+    padding: 8px;
+    background: #ed1b24;
+    color: #fff;
+    border-radius: 4px;
+    width: 80px;
+    border: 1px solid;
+    margin-top: 10px;
+    font-size: 14px;
+    line-height: 1.33;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    font-weight: bold;
+    font-family: Verdana;
+}
+</style>
+</head>
+<body>
+<table width="100%" border="0" cellspacing="0" cellpadding="0" align="center" bgcolor="#0025fe">
+  <tbody><tr>
+    <td align="center" valign="top">
+      <table width="80%" border="0" cellspacing="0" cellpadding="0">
+        <tbody><tr>
+          <td>
+            <table width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#0025fe">
+              <tbody><tr>
+                <td bgcolor="#ffffff" valign="top" >
+                  
+                  <div>
+                    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                      <tbody><tr>
+                        <td><br/><br/>
+                          <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                            <tbody><tr>
+                              <td  style="font-size:0pt;line-height:0pt;text-align:left" width="20" align="left"></td>
+                              <td align="center">
+                                <div style="font-size:0pt;line-height:0pt;text-align:center" align="center">
+                                  <img alt="" border="0" src="http://cms.regestutorials.in/images/reges_logo.jpg" 
+								  width="120" >
+                                </div>
+								<br/>
+                        <div  style="color:#000000;font-family:Arial;font-size:24px;line-height:24px;text-align:center" align="center">
+						  Welcome to<br/> Rege's Tutorials Pvt Ltd.                          
+						  </div>
+						   <br/>
+                                
+
+                                <div  style="color:#000000;font-family:Arial;font-size:14px;line-height:20px;text-align:center" align="center">
+                                  All updates about Rege's Tutorials ! <br> <br/>Let`s get started:
+                                </div>
+                             
+<br/><br/>
+                                <div style="font-size:0pt;line-height:0pt;text-align:center" align="center">
+                                  <a href="https://play.google.com/store/apps/details?id=com.appeteria.regestutorials" style="color:#55acee;text-decoration:none"
+								  target="_blank">
+								  <input type="submit" value="Download the App Now" class="button" style="width:240px" />
+								 </a>
+                                </div>
+                                
+                                <div  style="color:#000000;font-family:Arial;font-size:14px;line-height:20px;text-align:center" align="center">
+                                  <br><span>You can start using Rege's Tutorials App<br/><br/>
+								  Login with<br/>
+								  Mobile : ###mobile###<br/>
+								  Password: ###password###
+								  <br/><br/>
+								  Happy Learning !!!</i><br></span>
+                                  <br/>Enjoy,
+                                </div>
+<div  style="color:#000000;font-family:Arial;font-size:21px;line-height:20px;text-align:center" align="center">
+						   Rege's Tutorials Team</div>
+                              </td> 
+                              
+                            </tr>
+                          </tbody></table>
+                          <br/>
+                          <br/><br/>
+ 
+                         
+                          <div style="color:#000000;font-family:Arial;font-size:10px;line-height:14px;text-align:center" align="center">
+						  &copy; Rege's Tutorials, Powered by <a href="http://www.appeteria.com/" style="color:#000000;text-decoration:underline"
+							target="_blank" >Appeteria</a></div>
+                          
+
+                        </td>
+                        
+                      </tr>
+                    </tbody></table>
+                  </div>
+                </td>
+              </tr>
+            </tbody></table>
+          </td>
+        </tr>
+      </tbody></table>
+    </td>
+  </tr>
+</tbody></table>
+</body>
+</html>

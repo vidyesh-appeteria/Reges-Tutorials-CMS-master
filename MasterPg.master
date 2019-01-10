@@ -1,0 +1,106 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPg.master.cs" Inherits="MasterPg" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Rege's Tutorials</title>
+
+    <%--    <link rel="stylesheet" href="../css/modalbox.css" />
+    <script type="text/javascript" src="../js/modalbox.js"></script>--%>
+
+
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+    <script>
+        $(function () {
+            var options = { to: { width: 280, height: 185 } };
+            function runEffect() {
+                $("#btnAdd").hide();
+                $("#btnClose").show();
+                $("#effect").show("clip", options, 500, null);
+                $("#hdnClose").val("0");
+            }
+            //callback function to bring a hidden box back
+            //function callback() {
+            //    setTimeout(function () {
+            //        $("#effect:visible").removeAttr("style").fadeOut();
+            //    }, 1000);
+            //};
+
+            $("#btnAdd").on("click", function () {
+                runEffect();
+            });
+
+            $("#btnClose").on("click", function () {
+                $("#btnAdd").show();
+                $("#btnClose").hide();
+                $("#effect").hide("clip", options, 500, null);
+                $("#hdnClose").val("1");
+            });
+
+            $("#btnAdd").show();
+            $("#btnClose").hide();
+            $("#effect").hide();
+
+        });
+    </script>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+
+        <asp:Panel runat="server">
+
+            <center>
+                <table><tr><td><asp:Image ImageUrl="~/images/logo.jpg" AlternateText="Rege's Tutorials" runat="server"
+                    Width="60px"  style="margin-top:12px" />
+
+                           </td><td>
+                               <asp:Label  Text="Rege's Tutorials" runat="server" SkinID="LabelTitle" id="lblTitle" />
+                                </td></tr></table>
+                  
+                </center>
+            <br />
+            <br />
+            <asp:Menu ID="mnuHome" runat="server" Orientation="Horizontal" Width="100%">
+                <Items>
+                    <asp:MenuItem Text="Home" NavigateUrl="~/Menu.aspx" />
+
+                    <asp:MenuItem Text="Masters">
+                        <asp:MenuItem Text="Board Master" NavigateUrl="~/BoardMaster.aspx" />
+                        <asp:MenuItem Text="Standard Master" NavigateUrl="~/standardMaster.aspx" />
+                        <asp:MenuItem Text="Medium Master" NavigateUrl="~/MediumMaster.aspx" />
+                        <asp:MenuItem Text="Batch Master" NavigateUrl="~/BatchMaster.aspx" />
+                        <asp:MenuItem Text="Institute Master" NavigateUrl="~/InstituteMaster.aspx" />
+                        <asp:MenuItem Text="Type Master" NavigateUrl="~/TTTypeMaster.aspx" />
+
+                    </asp:MenuItem>
+                    <asp:MenuItem Text="Data">
+                        <asp:MenuItem Text="All Users" NavigateUrl="~/Users.aspx" />
+                        <asp:MenuItem Text="Time Table" NavigateUrl="~/TimeTable.aspx" />
+                        <asp:MenuItem Text="Study Material" NavigateUrl="~/StudyMaterial.aspx" />
+                        <asp:MenuItem Text="Attendance" NavigateUrl="~/Attendance.aspx" />
+                    </asp:MenuItem>
+                    <asp:MenuItem Text="Communication" Selectable="false">
+                        <asp:MenuItem Text="Send Notifications" NavigateUrl="~/SendNotification.aspx" />
+                    </asp:MenuItem>
+                    <asp:MenuItem Text="Configuration" Selectable="false">
+                        <asp:MenuItem Text="General" NavigateUrl="~/ConfigMaster.aspx" />
+                        <asp:MenuItem Text="App Update" NavigateUrl="~/appupdate.aspx" />
+                    </asp:MenuItem>
+                    <asp:MenuItem Text="Logout" NavigateUrl="Logout.aspx" />
+                </Items>
+            </asp:Menu>
+
+        </asp:Panel>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        </asp:ContentPlaceHolder>
+
+    </form>
+</body>
+</html>

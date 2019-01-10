@@ -1,0 +1,108 @@
+
+<asp:Textbox CssClass="textbox" runat="server" />
+
+<asp:Button CssClass="button" runat="server" />
+<asp:Button CssClass="buttonSecond" runat="server" skinid="ButtonSecond" />
+<asp:Button CssClass="buttonMenu" runat="server" skinid="ButtonMenu" />
+
+<asp:label CssClass="label" runat="server" />
+<asp:label CssClass="labelError" runat="server" skinid="LabelError" />
+<asp:label CssClass="labelTitle" runat="server" skinid="LabelTitle" />
+
+<asp:Panel CssClass="header" runat="server" />
+<asp:Panel CssClass="pnlMenu" runat="server"  skinid="pnlMenu"  />
+
+
+<asp:RadioButtonList Cssclass="radiolist" runat="server" />
+
+<asp:DropDownList CssClass="ddl" runat="server" />                
+
+
+<asp:GridView runat="server" CellPadding="4" CssClass="dg"	GridLines="horizontal" >
+	<HeaderStyle  CssClass="dgheader"/>			
+	<PagerStyle  HorizontalAlign="Left" CssClass="dgpager" />
+</asp:GridView>
+
+<asp:Menu runat="server"  BackColor="#F15B40" DynamicHorizontalOffset="2"
+                        Font-Names="Microsoft Sans Serif" Font-Size="1em" ForeColor="White" StaticSubMenuIndent="10px">
+    <StaticSelectedStyle BackColor="White" />
+    <StaticMenuItemStyle HorizontalPadding="10px" VerticalPadding="5px" />
+    <DynamicHoverStyle BackColor="White" ForeColor="#F15B40" />
+    <DynamicMenuStyle BackColor="#F15B40"  ForeColor="White"/>
+    <DynamicSelectedStyle BackColor="White" />
+    <DynamicMenuItemStyle HorizontalPadding="10px" VerticalPadding="5px" />
+    <StaticHoverStyle BackColor="White" ForeColor="#F15B40" />
+   </asp:Menu>
+
+<%--
+
+
+<asp:Textbox CssClass="gridtextbox" runat="server" SkinID="GridTextbox" />
+
+
+<asp:DropDownList CssClass="ddl" runat="server" />                
+
+<asp:label CssClass="labelWelcome" runat="server" skinid="Welcome" />
+
+<asp:Image runat="server"  ImageUrl="images/zeenetwork-75.png"  SkinID="ZeeLogo" />
+
+<asp:Image runat="server" skinID="PrideLogoSmall" ImageUrl="images/PrideLogoSmall.jpg"/>
+<asp:Image runat="server" skinID="PrideLogoLong" ImageUrl="images/PrideLogoSmall.jpg" />
+
+
+<asp:Image runat="server"  ImageUrl="images/MainLogin.jpg"  SkinID="MainLogin"   />
+<asp:Image runat="server"  ImageUrl="images/headerpurple.jpg"  SkinID="Header"   />
+
+<asp:Image runat="server"  ImageUrl="images/calendar.png"  SkinID="Calender"   />
+
+<asp:ImageButton runat="server"  ImageUrl="images/LeftArrow_pink.png"  SkinID="LeftArrow" Height="20px" Width="20px"    />
+<asp:Image runat="server"  ImageUrl="images/DownArrow_Red.png"  SkinID="DownArrow"/>
+<asp:ImageButton runat="server"  ImageUrl="images/Doc_pink.png"  SkinID="PRIDEManual" Height="30px" Width="30px"   />
+
+
+<asp:ImageButton runat="server"  ImageUrl="images/multiple_appraiser.png"  SkinID="MultiAPP" Height="20px" Width="20px"    />
+<asp:ImageButton runat="server"  ImageUrl="images/multiple_form.png"  SkinID="MultiForm" Height="20px" Width="20px"    />
+<asp:Image runat="server"  ImageUrl="images/Ace.png"  SkinID="ACEPersonnel" Height="20px" Width="20px"    />
+
+<asp:ImageButton runat="server" skinID="Logout"
+ImageUrl="Images/doorLogout.png" ToolTip="Logout" AlternateText="Logout" ImageAlign="AbsMiddle" />
+
+<asp:Image runat="server" skinID="Progress" ImageUrl="images/rotating_arrow.gif" Height="20px" Width="20px" />
+
+
+<asp:ImageButton runat="server" skinID="ChangePwd"
+ImageUrl="Images/lockChangepwd.png" ToolTip="Change Password" AlternateText="Change Password" ImageAlign="AbsMiddle" />
+
+<asp:ImageButton runat="server" skinID="APPROVE" ImageUrl="Images/APPROVE1.JPG" ToolTip="Auto Approve" AlternateText="Auto Approve"/>
+
+
+<asp:GridView runat="server" CellPadding="4" CssClass="dg"	GridLines="both" >
+	<HeaderStyle  CssClass="dgheader"/>			
+	<PagerStyle  HorizontalAlign="Left" CssClass="dgpager" />
+</asp:GridView>
+
+
+
+
+  <asp:CheckBoxList  Cssclass="chklist" runat="server">
+</asp:CheckBoxList>
+
+<asp:BulletedList Cssclass="bullist" runat="server" >
+</asp:BulletedList>
+
+
+
+<asp:HyperLink  runat="server" Font-Size="12px"  ForeColor="purple" />
+<asp:LinkButton  Cssclass="lnkButton"  runat="server"/>
+
+<asp:Menu runat="server"  BackColor="White" DynamicHorizontalOffset="2"
+                        Font-Names="Microsoft Sans Serif" Font-Size="1em" ForeColor="BLACK" StaticSubMenuIndent="10px">
+    <StaticSelectedStyle BackColor="White" />
+    <StaticMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
+    <DynamicHoverStyle BackColor="White" ForeColor="Gray" />
+    <DynamicMenuStyle BackColor="White" />
+    <DynamicSelectedStyle BackColor="White" />
+    <DynamicMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
+    <StaticHoverStyle BackColor="White" ForeColor="Gray" />
+   </asp:Menu>
+  --%>

@@ -1,0 +1,221 @@
+﻿
+#modalContainer {
+	position:absolute;
+	width:100%;
+	height:100%;
+	top:0px;
+	left:0px;
+	/*background-image: url('../Images/bg.png');*/
+}
+.ModalPopUp 
+{
+	/*position:absolute;
+	width:100%;
+	height:100%;
+	top:0px;
+	left:0px;background-image: url('../Images/bg.png');
+
+    padding: 20px;*/
+    position: fixed;		
+	margin-top:-150px;
+	margin-left:-300px;
+    top:50%;
+    left:60%;
+	overflow-x:hidden;
+    z-index: 99999999;
+    border:1px solid #eae7e7;
+    border-radius:5px;
+    box-shadow:0 0 12px 3px #999;
+}
+.GridModalPopUp 
+{
+    position: fixed;		
+	margin-top:-150px;
+	margin-left:-300px;
+    top:40%;
+    left:50%;
+	overflow-x:hidden;
+    z-index: 0;
+    border:1px solid #eae7e7;
+    border-radius:5px;
+    box-shadow:0 0 12px 3px #999;
+}
+
+.MemberSearchModalPopUp 
+{
+    position: fixed;		
+	margin-top:-150px;
+	margin-left:0px;
+    top:40%;
+    left:230px;
+	overflow-x:hidden;
+    z-index: 1;
+    border:1px solid #eae7e7;
+    border-radius:5px;
+    box-shadow:0 0 12px 3px #999;
+}
+
+.ModalLoad 
+{
+	background: url('../Images/load.gif') no-repeat; width: 60px; height: 60px; margin:0 auto;  
+}
+#btnBox
+{
+	height:25px!important;
+	text-align:center!important;
+	width:auto;
+	margin:0 auto; 
+}
+
+#modalContainer > #alertBox {
+	position:fixed;
+}
+#modalContainer > #confirmBox {
+	position:fixed;
+}
+
+#alertBox {
+	position:relative;
+	top:300px!important;
+	width:250px;
+	min-height:100px;
+	
+	border-left:1px solid #CCC;
+	border-top:1px solid #CCC;
+	border-right:2px solid #AAA;
+	border-bottom:2px solid #AAA;
+/*	background :url('../Images/GreenCheckMark.png');*/
+	background-color:#FFFFFF;
+	background-repeat:no-repeat;
+	background-position:10px 40px;
+	padding-top:2px;
+	z-index: 9999;
+    user-select:all
+
+}
+
+
+
+#alertBoxError {
+	position:relative;
+	top:300px!important;
+	width:300px;
+	min-height:100px;
+	
+	border-left:1px solid #CCC;
+	border-top:1px solid #CCC;
+	border-right:2px solid #AAA;
+	border-bottom:2px solid #AAA;
+	background :url('../Images/exclamation.png');
+	background-color:#FFFFFF;
+	background-repeat:no-repeat;
+	background-position:10px 40px;
+
+}
+
+#confirmBox {
+	position:relative;
+	top:200px!important;
+	width:300px;
+	min-height:100px;
+	margin-top:50px;
+	border-left:1px solid #CCC;
+	border-top:1px solid #CCC;
+	border-right:2px solid #AAA;
+	border-bottom:2px solid #AAA;
+	background :url('../Images/question.gif');
+	background-color:#FFFFFF;
+	background-repeat:no-repeat;
+	background-position:10px 40px;
+
+}
+
+
+
+#modalContainer  h1 {
+	margin:0;
+	font:bold 0.9em verdana,arial;
+	color:#FFF;
+	border-bottom:1px solid #CCCCCC;
+	padding:5px 5px 5px 5px;
+	background :url('../Images/logo.png') no-repeat center;
+	height:25px;
+	background-color:#FFC900;
+}
+
+
+
+#modalContainer  p {
+	font:0.9em verdana,arial;
+	margin-top:10px;
+	padding-left:5px;
+	padding-right:2px;
+	padding-bottom:15px;
+	margin-left:35px;
+	padding-top:7px;
+	vertical-align:middle;
+}
+
+#modalContainer  a {
+	
+	margin:3px 3px 3px 3px;
+	padding:3px 10px!important;
+	text-align:center;
+	text-decoration:none;
+    border-left:1px solid #e0e0e0!important;
+	border-top:1px solid #e0e0e0!important;
+	border-right:1px solid #a7a7a7!important;
+	border-bottom:1px solid #a7a7a7!important;
+	/*background: #16283C; */
+	font: 11px Verdana, sans-serif; 
+	font-weight:bolder;
+    cursor:pointer;
+	min-width :100px;
+	/*background:url('../images/bg-button.png') repeat-x left bottom; */
+
+}
+
+.RefundResultInner 
+{
+	text-align: center;
+	width: 360px;
+	margin: 0 auto;
+	background-color: #FFF;
+	border-left:1px solid #CCC;
+	border-top:1px solid #CCC;
+	border-right:2px solid #AAA;
+	border-bottom:2px solid #AAA;
+}
+.RefundResult 
+{
+	position:absolute;
+	width:100%;
+	height:100%;
+	top:0px;
+	left:0px;background-image: url('../Images/bg.png');	
+
+}
+.RefundBox 
+{
+	padding: 0 10px 15px 10px;
+}
+
+.RefundResultInner  h1 {
+	margin:0;
+	font:bold 0.9em verdana,arial;
+	color:#FFF;
+	border-bottom:1px solid #CCCCCC;
+	padding:5px 5px 5px 5px;
+	background :url('../Images/logo-small.png') no-repeat;
+	height:25px;
+	background-color:#F1F1F1;
+}
+
+.RefundResultInner  p {
+	font:0.9em verdana,arial;
+	padding: 10px 0 10px 0;
+	vertical-align:middle;
+	font-size: 12px;
+	font-weight: bold;
+}
+
