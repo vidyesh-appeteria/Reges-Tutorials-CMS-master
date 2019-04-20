@@ -17,19 +17,42 @@ public partial class Users : System.Web.UI.Page
     { 
         if (!IsPostBack)
         {
+            ((MasterPg)this.Master).title = "List of Users";
             FillGrid();
             FillTrashGrid(true, false);
-            ((MasterPg)this.Master).title = "List of Users";
+            FillStandard();
         }
         lblError.Text = "";
 
 
+    }
+    private void FillStandard()
+    {
+        try
+        {
+            DatabaseHelper db = new DatabaseHelper();
+            DataSet ds = db.ExecuteDataSet("get_serachStd", CommandType.StoredProcedure);
+            if (ds.Tables.Count >0 && ds.Tables[0].Rows.Count > 0)
+            {
+                ddlSearchStandard.Items.Add(new ListItem("All", "0"));
+                foreach (DataRow dr in ds.Tables[0].Rows)
+                {
+                    ddlSearchStandard.Items.Add(new ListItem(dr["standard"].ToString(), dr["standard_id"].ToString()));
+                }
+            }
+        }
+        catch (Exception ex)
+        {
+
+            lblError.Text = ex.Message;
+        }
     }
     private void FillGrid()
     {
         DatabaseHelper db = new DatabaseHelper();
         db.AddParameter("@user_type", ddlUserType.SelectedValue);
         db.AddParameter("@full_name", txtName.Text);
+        db.AddParameter("@standard_id", ddlSearchStandard.SelectedValue);
         db.AddParameter("@active", 1);
         gvUsers.DataSource = db.ExecuteDataSet("getUsers", CommandType.StoredProcedure);
         gvUsers.DataBind();
@@ -38,7 +61,6 @@ public partial class Users : System.Web.UI.Page
         lblError.Text += ddlUserType.SelectedIndex == 0 ? " User" : " " + ddlUserType.SelectedItem.Text;
         lblError.Text += gvUsers.Rows.Count > 1 ? "s" : "";
     }
-
 
     private void FillTrashGrid(bool showCount, bool showGrid)
     {
@@ -82,6 +104,7 @@ public partial class Users : System.Web.UI.Page
     {
         txtName.Text = string.Empty;
         ddlUserType.SelectedIndex = 0;
+        ddlSearchStandard.SelectedIndex = 0;
         FillGrid();
     }
 

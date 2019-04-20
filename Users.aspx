@@ -21,6 +21,8 @@
                   <asp:ListItem Text="Student" Value="STUDENT" />
                   <asp:ListItem Text="Parent" Value="PARENT" />
                   </asp:DropDownList></td>
+              <td><asp:Label Text="Standard" runat="server" /></td>
+              <td><asp:DropDownList ID ="ddlSearchStandard" runat="server"></asp:DropDownList></td>
               <td><asp:button text="Search" runat="server" ID="btnSearch" OnClick="btnSearch_Click" />
 
                <asp:button text="Clear" ID="btnClear" OnClick="btnClear_Click" runat="server" />
