@@ -176,6 +176,7 @@ public partial class UserMaster : System.Web.UI.Page
         db.AddParameter("@modified_by", Session["UserId"]);
 
         int user_id = Convert.ToInt16(db.ExecuteScalar("save_user_master", CommandType.StoredProcedure));
+        hdnUserId.Value = user_id.ToString();
 
         if (file_name != string.Empty)
         {
